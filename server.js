@@ -28,13 +28,11 @@ app.get('/weather', (request, response) => {
   try{
     const weatherData = require('./data/darksky.json');
     const weather = new Weather(request.query.data, weatherData);
-    weatherAtLocation.push(weather);
     response.send(weather);
   } catch (error) {
     response.status(400).send({ '404 error': error });
   }
 });
-
 
 function Location(query, geoData) {
   this.search_query = query;
@@ -44,10 +42,15 @@ function Location(query, geoData) {
 }
 function Weather(query, weatherData) {
   this.search_query = query;
-  this.latitude = weatherData.latitude;
-  this.longitude = weatherData.longitude;
-  this.forecast = weatherData.currently.summary;
-  this.time = new Date(weatherData.currently.time).toString();
+//   this.latitude = weatherData.latitude;
+//   this.longitude = weatherData.longitude;
+  
+  this.weatherAtLocation = weatherData.hourly.data.forEach(element => {
+    this.forecast = element.summary;
+    this.time = new Date(element.time).toString();
+   
+  });
+  
 }
 
 app.listen(PORT, () => {
