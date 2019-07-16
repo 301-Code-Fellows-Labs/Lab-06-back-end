@@ -8,29 +8,23 @@ Project Name
 ## Overview
 Stand-alone back end which will interact with a static front end. Working with a new partner each day, you will request data from a total of six third-party APIs, modify the data as needed, and send the data to the client to be displayed in the browser. In labs 8 and 9, you will be persisting data in a SQL database.
 
-For this lab assignment, you will convert a location entered by the user into a latitude and longitude, then use those values to request weather information for that location. As your City Explorer back end progresses in labs 6 through 9, you will use the latitude and longitude to request information from other APIs from the same search query.
+For this lab assignment, we will convert a location entered by the user into a latitude and longitude, then use those values to request weather information for that location. As your City Explorer back end progresses in labs 6 through 9, you will use the latitude and longitude to request information from other APIs from the same search query.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
-
+For this lab we will use two provided JSON files to extract data using the server.js file. 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-
+We will use constructor functions to create output objects that follow the same patern. These constructor functions take in a user's query request and display data that gets recieved from the JSON files.
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource.
-
+7/16/2019 1:00pm
+Fully functioning directory with all required files and sub-directories, server.JS contains constructor functions that display results of location and weather requests.
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
 
 # Feature 1 - Location
 
-Estimate of time needed to complete: 2
+Estimate of time needed to complete: 2 h
 
 Start time: 10:00
 
 Finish time: 12:00
 
-Actual time needed to complete: ?
+Actual time needed to complete: 3 hours

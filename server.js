@@ -45,10 +45,9 @@ function Weather(query, weatherData) {
 //   this.latitude = weatherData.latitude;
 //   this.longitude = weatherData.longitude;
   
-  this.weatherAtLocation = weatherData.hourly.data.forEach(element => {
+    this.weatherAtLocation = weatherData.hourly.data.forEach(element => {
     this.forecast = element.summary;
-    this.time = new Date(element.time).toString();
-   
+    this.time = new Date(element.time).toString();  
   });
   
 }
